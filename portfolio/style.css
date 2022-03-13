@@ -1,0 +1,188 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.logo img {
+  width: 150px;
+  margin: 20px 0px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.section-1 {
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-1 ul {
+  display: flex;
+  margin-right: 20px;
+}
+
+li {
+  margin: 20px 20px;
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: rgb(231, 41, 27);
+}
+
+.center-text {
+  display: flex;
+  height: 60%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(57, 154, 238);
+  text-align: center;
+  font-size: 1.7rem;
+  margin-top: 100px;
+}
+
+.center-text p {
+  color: rgba(250, 6, 6, 0.8);
+}
+
+.btn {
+  display: none;
+}
+
+.pic {
+  background-image: url("https://media-exp1.licdn.com/dms/image/C5603AQF-23n4FmayAA/profile-displayphoto-shrink_100_100/0/1641417948376?e=1650499200&v=beta&t=sPqhPnKLa7uIw34-L-Gc6znnIInBSQdkwc2Kjy92xUc");
+  border-radius: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid rgb(238, 7, 7);
+  width: 100px;
+  height: 100px;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 1.9rem;
+  color: rgb(235, 23, 8);
+  animation: navimaton 3s infinite ease;
+}
+
+.about-section {
+  padding: 0px 5px;
+  display: flex;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+.about-container .about {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: rgb(230, 23, 23);
+}
+
+.about-container {
+  padding-right: 5px;
+  width: 60%;
+  margin: 40px 0px;
+}
+.hobby-container {
+  background: url("https://media.istockphoto.com/vectors/guy-musical-blogger-recording-video-on-camera-man-playing-classical-vector-id1127696622?k=20&m=1127696622&s=612x612&w=0&h=d4gPSh90Yr34Fner9qka0CtZocyuzMC5Q8z1sOZAJ70=");
+
+  background-position: center center;
+  width: 40%;
+  margin: 40px 0px 40px 50px;
+}
+
+.section-2 {
+  background-color: rgb(241, 250, 255);
+  padding: 0px 150px;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* MEDIA QUERY FOR 700PX */
+@media screen and (max-width: 700px) {
+  .logo img {
+    margin-top: 5px;
+    width: 120px;
+    position: absolute;
+    margin: 0px 0px;
+  }
+  .section-1 .nav-ul {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .center-text {
+    font-size: 0.7rem;
+  }
+
+  .center-text p {
+    font-size: 0.9rem;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+  }
+
+  .nav-menu {
+    display: none;
+    animation: navimaton 1s ease;
+  }
+
+  li {
+    margin: 10px 0px;
+  }
+
+  nav {
+    background-color: rgba(13, 125, 230, 0.4);
+    border-radius: 0px 0px 100px 0px;
+  }
+
+  .navli {
+    display: block;
+    margin: auto;
+    animation: navimaton 1s ease;
+  }
+
+  .btn {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 1.7rem;
+    color: rgba(250, 6, 6, 0.8);
+  }
+
+  .section-2 {
+    padding: 0px 5px;
+  }
+}
+
+@keyframes navimaton {
+  0% {
+    transform: translatey(-40px);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translatey(0px);
+    opacity: 1;
+  }
+}
