@@ -108,10 +108,25 @@ li a {
 
 .section-2 {
   background-color: rgb(241, 250, 255);
-  padding: 0px 150px;
+  padding: 0px 200px;
   display: flex;
   height: 100vh;
   flex-direction: column;
+}
+
+.project-h1 {
+  text-align: center;
+  color: red;
+}
+
+.project-h1::after,
+.project-h1::before {
+  display: inline-block;
+  content: "";
+  border-top: 4px solid rgb(3, 154, 255);
+  width: 4rem;
+  margin: 0 0.6rem;
+  transform: translateY(-0.5rem);
 }
 
 /* MEDIA QUERY FOR 700PX */
