@@ -97,7 +97,9 @@ li a {
   padding-right: 5px;
   width: 60%;
   margin: 40px 0px;
+  transition: 3s all ease;
 }
+
 .hobby-container {
   background: url("https://media.istockphoto.com/vectors/guy-musical-blogger-recording-video-on-camera-man-playing-classical-vector-id1127696622?k=20&m=1127696622&s=612x612&w=0&h=d4gPSh90Yr34Fner9qka0CtZocyuzMC5Q8z1sOZAJ70=");
 
@@ -127,6 +129,66 @@ li a {
   width: 4rem;
   margin: 0 0.6rem;
   transform: translateY(-0.5rem);
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.project {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.pro1 {
+  background: url("pro.png");
+  background-position: center center;
+  background-size: cover;
+}
+
+.pro2 {
+  background: url("pro2.png");
+  background-position: center center;
+  background-size: cover;
+}
+
+.pro3 {
+  background: url("weath.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.effect {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.568);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.project:hover .effect {
+  height: 0%;
+  transition: all 0.5s ease;
+}
+
+.project h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: 2;
+  color: white;
+}
+
+.project:hover.project h1 {
+  display: none;
 }
 
 /* MEDIA QUERY FOR 700PX */
