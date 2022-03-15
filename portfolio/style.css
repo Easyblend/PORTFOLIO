@@ -115,10 +115,14 @@ li a {
   height: 100vh;
   flex-direction: column;
 }
+.project-section {
+  margin-top: 100px;
+}
 
 .project-h1 {
   text-align: center;
   color: red;
+  margin-bottom: 50px;
 }
 
 .project-h1::after,
@@ -164,7 +168,7 @@ li a {
 .effect {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.568);
+  background-color: rgba(0, 0, 0, 0.678);
   position: absolute;
   top: 0;
   left: 0;
@@ -184,11 +188,80 @@ li a {
   align-items: center;
   height: 100%;
   z-index: 2;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .project:hover.project h1 {
   display: none;
+}
+
+.section-3 {
+  position: relative;
+  display: flex;
+  height: 70vh;
+  flex-direction: column;
+  padding: 50px 150px;
+  color: rgb(3, 112, 255);
+}
+/*h1 for skill*/
+.skill {
+  font-size: 3rem;
+  text-align: center;
+  color: rgb(255, 19, 19);
+}
+
+/*Editing tags  around the skills*/
+.displace {
+  position: absolute;
+  color: rgb(255, 0, 0);
+  font-size: 120%;
+  opacity: 0.5;
+}
+
+.tag {
+  top: 290px;
+  right: 600px;
+}
+.symbols {
+  top: 290px;
+  right: 200px;
+  color: #ff0000;
+  font-size: 170%;
+}
+
+.code {
+  top: 140px;
+  right: 1000px;
+}
+
+.script {
+  top: 180px;
+  right: 200px;
+}
+
+.file {
+  top: 200px;
+  right: 500px;
+}
+
+.link {
+  top: 230px;
+  left: 240px;
+}
+
+.nodejs {
+  top: 300px;
+  right: 830px;
+  color: rgb(255, 0, 0);
+  font-size: 140%;
+}
+/*Editing tags  around the skills*/
+.skill-container {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 5rem;
+  place-content: center;
+  justify-content: space-around;
 }
 
 /* MEDIA QUERY FOR 700PX */
