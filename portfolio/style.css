@@ -1,6 +1,7 @@
 * {
   margin: 0%;
   padding: 0%;
+  overflow-x: hidden;
 }
 
 .logo img {
@@ -97,12 +98,10 @@ li a {
   padding-right: 5px;
   width: 60%;
   margin: 40px 0px;
-  transition: 3s all ease;
 }
 
 .hobby-container {
   background: url("https://media.istockphoto.com/vectors/guy-musical-blogger-recording-video-on-camera-man-playing-classical-vector-id1127696622?k=20&m=1127696622&s=612x612&w=0&h=d4gPSh90Yr34Fner9qka0CtZocyuzMC5Q8z1sOZAJ70=");
-
   background-position: center center;
   width: 40%;
   margin: 40px 0px 40px 50px;
@@ -112,7 +111,7 @@ li a {
   background-color: rgb(241, 250, 255);
   padding: 0px 200px;
   display: flex;
-  height: 100vh;
+
   flex-direction: column;
 }
 .project-section {
@@ -138,7 +137,7 @@ li a {
 .project-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 50px;
 }
 
 .project {
@@ -195,82 +194,145 @@ li a {
   display: none;
 }
 
-.section-3 {
-  position: relative;
-  display: flex;
-  height: 70vh;
-  flex-direction: column;
-  padding: 50px 150px;
-  color: rgb(3, 112, 255);
-}
 /*h1 for skill*/
-.skill {
-  font-size: 3rem;
-  text-align: center;
-  color: rgb(255, 19, 19);
-}
 
 /*Editing tags  around the skills*/
 .displace {
   position: absolute;
   color: rgb(255, 0, 0);
   font-size: 120%;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .tag {
-  top: 290px;
-  right: 600px;
+  top: 260px;
+  right: 710px;
+  animation: skillmove 8s ease infinite;
 }
 .symbols {
   top: 290px;
-  right: 200px;
-  color: #ff0000;
+  right: 350px;
   font-size: 170%;
+  animation: skillmove 6.9s ease infinite;
 }
 
 .code {
-  top: 140px;
-  right: 1000px;
+  top: 270px;
+  right: 1200px;
+  animation: skillmove 7.6s ease infinite;
 }
 
 .script {
-  top: 180px;
-  right: 200px;
+  top: 200px;
+  right: 310px;
+  animation: skillmove 8.5s ease infinite;
 }
 
 .file {
   top: 200px;
-  right: 500px;
+  right: 790px;
+  animation: skillmove 7.5s ease infinite;
 }
 
 .link {
   top: 230px;
-  left: 240px;
+  left: 380px;
+  animation: skillmove1 7.3s ease infinite;
 }
 
 .nodejs {
-  top: 300px;
-  right: 830px;
+  top: 280px;
+  right: 800px;
   color: rgb(255, 0, 0);
   font-size: 140%;
-}
-/*Editing tags  around the skills*/
-.skill-container {
-  display: flex;
-  grid-template-columns: 1fr 1fr 1fr;
-  font-size: 5rem;
-  place-content: center;
-  justify-content: space-around;
+  animation: skillmove 6.5s ease infinite;
 }
 
+.section-4 {
+  background: url("https://media.istockphoto.com/photos/sticky-note-message-picture-id536855407?b=1&k=20&m=536855407&s=170667a&w=0&h=lZR59sOrMmkYJMoC8A-6O9d_09-C9n-xWN8B_c7aFco=");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  padding: 50px 0px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 1px 1px 19px 1px rgba(0, 0, 0, 0.226);
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 35em;
+  height: 3rem;
+  margin: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: rgb(236, 236, 236);
+  padding: 0px 10px;
+  font-size: 15px;
+}
+
+textarea {
+  width: 35em;
+  height: 8rem;
+  margin: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: rgb(236, 236, 236);
+  padding: 0px 10px;
+  font-size: 15px;
+}
+
+::placeholder {
+  color: rgb(0, 40, 92);
+}
+
+button {
+  text-align: center;
+  width: 9rem;
+  height: 3rem;
+  border-radius: 15px;
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgba(255, 31, 31, 0.794);
+  color: white;
+}
+
+.h2 {
+  margin-top: 30px;
+  color: #1381ff;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.links-icon {
+  font-size: 120%;
+}
 /* MEDIA QUERY FOR 700PX */
 @media screen and (max-width: 700px) {
   .logo img {
-    margin-top: 5px;
     width: 120px;
     position: absolute;
-    margin: 0px 0px;
+    margin: auto;
   }
   .section-1 .nav-ul {
     display: flex;
@@ -323,6 +385,45 @@ li a {
   .section-2 {
     padding: 0px 5px;
   }
+
+  .about-section {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 10px;
+  }
+
+  .about-container {
+    width: 100%;
+  }
+
+  .hobby-container {
+    margin: 0px;
+    padding: 10px;
+    width: 100%;
+    height: 300px;
+  }
+
+  .project-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    padding: 20px;
+  }
+
+  .section-4 {
+  }
+
+  .contact-container {
+    width: 120%;
+  }
+
+  input {
+    width: 16rem;
+  }
+
+  textarea {
+    width: 16rem;
+  }
 }
 
 @keyframes navimaton {
@@ -336,3 +437,22 @@ li a {
     opacity: 1;
   }
 }
+
+@keyframes skillmove {
+  0% {
+    transform: translatey(0px);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translatey(-40px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translatey(0px);
+    opacity: 1;
+  }
+}
+
+/* animation two*/
