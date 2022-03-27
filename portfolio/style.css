@@ -7,23 +7,30 @@
 .logo img {
   width: 150px;
   margin: 20px 0px;
+  position: fixed;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  position: relative;
 }
 
 .section-1 {
   height: 100vh;
   background: rgb(255, 255, 255);
   background-size: cover;
+  position: relative;
 }
 
-nav {
+.nav {
   display: flex;
   justify-content: space-between;
+  position: fixed;
 }
 
+.nav-menu {
+  margin-left: 1030px;
+}
 .section-1 ul {
   display: flex;
   margin-right: 20px;
@@ -32,12 +39,19 @@ nav {
 li {
   margin: 20px 20px;
   list-style: none;
+  color: rgb(231, 41, 27);
+  text-align: center;
+}
+
+.nav li {
+  margin-top: 20px;
 }
 
 li a {
   text-decoration: none;
   font-size: 1.3rem;
   color: rgb(231, 41, 27);
+  text-align: center;
 }
 
 .center-text {
@@ -97,11 +111,11 @@ li a {
 .about-container {
   padding-right: 5px;
   width: 60%;
-  margin: 40px 0px;
+  margin: 20px 0px;
 }
 
 .hobby-container {
-  background: url("https://media.istockphoto.com/vectors/guy-musical-blogger-recording-video-on-camera-man-playing-classical-vector-id1127696622?k=20&m=1127696622&s=612x612&w=0&h=d4gPSh90Yr34Fner9qka0CtZocyuzMC5Q8z1sOZAJ70=");
+  background: url("https://media.istockphoto.com/photos/ghana-accra-kwame-nkrumah-park-picture-id498116341?b=1&k=20&m=498116341&s=170667a&w=0&h=n_E4fSh9YffKJDamDuZc9HuOFuzhGqj1sHzrVmJtKn4=");
   background-position: center center;
   width: 40%;
   margin: 40px 0px 40px 50px;
@@ -115,7 +129,7 @@ li a {
   flex-direction: column;
 }
 .project-section {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .project-h1 {
@@ -142,9 +156,8 @@ li a {
 
 .project {
   height: 300px;
-  position: relative;
-  overflow: hidden;
   border-radius: 10px;
+  position: relative;
 }
 .pro1 {
   background: url("pro.png");
@@ -172,7 +185,6 @@ li a {
   top: 0;
   left: 0;
   transition: all 0.3s ease;
-  z-index: 1;
   border-radius: 10px;
 }
 
@@ -186,7 +198,6 @@ li a {
   justify-content: center;
   align-items: center;
   height: 100%;
-  z-index: 2;
   color: rgb(255, 255, 255);
 }
 
@@ -199,50 +210,94 @@ li a {
 /*Editing tags  around the skills*/
 .displace {
   position: absolute;
-  color: rgb(255, 0, 0);
+  color: rgb(0, 60, 255);
   font-size: 120%;
   opacity: 0.3;
 }
 
 .tag {
   top: 260px;
-  right: 710px;
+  left: 1800px;
   animation: skillmove 8s ease infinite;
 }
 .symbols {
   top: 290px;
-  right: 350px;
+  left: 1500px;
   font-size: 170%;
   animation: skillmove 6.9s ease infinite;
 }
 
 .code {
   top: 270px;
-  right: 1200px;
+  left: 1200px;
   animation: skillmove 7.6s ease infinite;
 }
 
 .script {
   top: 200px;
-  right: 310px;
+  left: 1000px;
   animation: skillmove 8.5s ease infinite;
 }
 
 .file {
   top: 200px;
-  right: 790px;
+  left: 700px;
   animation: skillmove 7.5s ease infinite;
 }
 
 .link {
   top: 230px;
-  left: 380px;
+  left: 400px;
   animation: skillmove1 7.3s ease infinite;
 }
 
 .nodejs {
   top: 280px;
-  right: 800px;
+  left: 100px;
+  color: rgb(255, 0, 0);
+  font-size: 140%;
+  animation: skillmove 6.5s ease infinite;
+}
+/*SECOND TAGS ANIMA*/
+.tag1 {
+  top: 760px;
+  left: 1800px;
+  animation: skillmove 8s ease infinite;
+}
+.symbols1 {
+  top: 790px;
+  left: 1200px;
+  font-size: 170%;
+  animation: skillmove 6.9s ease infinite;
+}
+
+.code1 {
+  top: 770px;
+  left: 1500px;
+  animation: skillmove 7.6s ease infinite;
+}
+
+.script1 {
+  top: 700px;
+  left: 700px;
+  animation: skillmove 8.5s ease infinite;
+}
+
+.file1 {
+  top: 700px;
+  left: 1000px;
+  animation: skillmove 7.5s ease infinite;
+}
+
+.link1 {
+  top: 730px;
+  left: 400px;
+  animation: skillmove1 7.3s ease infinite;
+}
+
+.nodejs1 {
+  top: 720px;
+  left: 100px;
   color: rgb(255, 0, 0);
   font-size: 140%;
   animation: skillmove 6.5s ease infinite;
@@ -331,8 +386,7 @@ button {
 @media screen and (max-width: 700px) {
   .logo img {
     width: 120px;
-    position: absolute;
-    margin: auto;
+    margin-top: 10px;
   }
   .section-1 .nav-ul {
     display: flex;
@@ -356,30 +410,72 @@ button {
   .nav-menu {
     display: none;
     animation: navimaton 1s ease;
+    height: 100vh;
+    overflow: hidden;
+    margin: auto;
+    z-index: 999;
   }
 
   li {
     margin: 10px 0px;
   }
 
-  nav {
-    background-color: rgba(13, 125, 230, 0.4);
-    border-radius: 0px 0px 100px 0px;
+  .nav-menu a {
+    font-size: 3rem;
+    font-family: bold;
+    margin: 0%;
+    z-index: 999;
   }
 
   .navli {
-    display: block;
-    margin: auto;
     animation: navimaton 1s ease;
+    font-size: 4rem;
+    position: fixed;
+    display: block;
+    width: 100%;
+    padding-right: 70px;
+    background-color: #1381ff;
+    z-index: 999;
   }
 
   .btn {
     display: block;
-    position: absolute;
+    position: fixed;
     right: 10px;
     top: 10px;
     font-size: 1.7rem;
     color: rgba(250, 6, 6, 0.8);
+  }
+
+  /*ICONS ANIMATIONS*/
+  .tag {
+    top: 160px;
+    left: 10px;
+    animation: skillmove 8s ease infinite;
+  }
+  .symbols {
+    top: 290px;
+    left: 240px;
+    font-size: 170%;
+    animation: skillmove 6.9s ease infinite;
+  }
+
+  .code {
+    top: 70px;
+    left: 350px;
+    animation: skillmove 7.6s ease infinite;
+  }
+
+  .script {
+    top: 500px;
+    left: 100px;
+    animation: skillmove 4.5s ease infinite;
+  }
+
+  .file {
+    top: 400px;
+    left: 300px;
+    animation: skillmove 7.5s ease infinite;
   }
 
   .section-2 {
@@ -389,15 +485,17 @@ button {
   .about-section {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    padding: 10px;
+    padding: 10px 0px 0px 0px;
   }
 
   .about-container {
     width: 100%;
+    margin: 0%;
   }
 
   .hobby-container {
     margin: 0px;
+    margin-top: 20px;
     padding: 10px;
     width: 100%;
     height: 300px;
@@ -407,10 +505,13 @@ button {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 5px;
-    padding: 20px;
+    padding: 10px;
   }
-
-  .section-4 {
+  .project-section {
+    margin-top: 0px;
+  }
+  .project-h1 {
+    margin: 0px;
   }
 
   .contact-container {
@@ -429,12 +530,10 @@ button {
 @keyframes navimaton {
   0% {
     transform: translatey(-40px);
-    opacity: 0.5;
   }
 
   100% {
     transform: translatey(0px);
-    opacity: 1;
   }
 }
 
@@ -442,16 +541,19 @@ button {
   0% {
     transform: translatey(0px);
     opacity: 0.5;
+    color: #1381ff;
   }
 
   50% {
     transform: translatey(-40px);
-    opacity: 1;
+    opacity: 0.5;
+    color: #ff2916;
   }
 
   100% {
     transform: translatey(0px);
-    opacity: 1;
+    opacity: 0.5;
+    color: #1381ff;
   }
 }
 

@@ -19,23 +19,25 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!--MAIN CONTAINER-->
-
-    <div class="section-1">
-      <!--SECTION ONE-->
+    <div class="section-1" id="home">
       <nav class="nav">
         <!--navigation start-->
         <div class="logo"><img src="LOGO2.png" alt="" /></div>
         <span class="btn"><i class="fa-solid fa-bars"></i></span>
         <div class="nav-menu">
           <ul class="nav-ul">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contract">contact</a></li>
+            <li><a class="linkBtn1" href="#home">HOME</a></li>
+            <li><a class="linkBtn2" href="#about">ABOUT</a></li>
+            <li><a class="linkBtn3" href="#projects">PROJECTS</a></li>
+            <li><a class="linkBtn4" href="#contact">CONTACT</a></li>
           </ul>
         </div>
       </nav>
+
       <!--navigation END-->
+
+      <!--SECTION ONE-->
+
       <div class="center-text">
         <div class="pic"></div>
         <h1>EMMANUEL KUMAH</h1>
@@ -44,21 +46,22 @@
       <div class="arrow"><i class="fa-solid fa-arrow-down-long"></i></div>
     </div>
     <!--SECTION TWO-->
-    <div class="section-2">
+    <div class="section-2" id="about">
       <!--ABOUT SECTION-->
       <div class="about-section">
         <div class="about-container">
           <div class="about">ABOUT</div>
           <p class="about-para">
-            I grew up in Bremen, Germany, in a family of book-crazy women. My
-            career in advertising brought me to New York City in my early
-            twenties. After working for several large ad agencies in the city, I
-            left the rat race to be home with my three spirited (read: loud and
-            strong-willed) children. Being a full-time mom is the best job in
-            the world. It’s also the hardest and not always the most fulfilling.
-            Then a magical thing happened: I discovered my love for writing. And
-            over the course of a couple of life-changing years, I wrote my first
-            novel
+            I grew up in Accra, Ghana, in a family of book-crazy sibblings. My
+            career in web-development brought me to Kumasi,Ghana in my teens.
+            After working for several large ad agencies in the city, I left the
+            rat race to be home with my three spirited (read: loud and
+            strong-willed) sibblings. Being a full-time student at the Kwame
+            Nkrumash's University of Science and Technology.Being a Student and
+            a worker at the same time is also the hardest and not always the
+            most fulfilling. Then a magical thing happened: I discovered my love
+            for Freelancing. And over the course of a couple of life-changing
+            years, I take time in making amazing websites for my clients
           </p>
         </div>
         <!--SECOND CONTAINER-->
@@ -72,10 +75,21 @@
           <div class="displace nodejs">
             <i class="fa-brands fa-node-js"></i>
           </div>
+          <div class="displace tag1"><i class="fa-solid fa-code"></i></div>
+          <div class="displace code1"><i class="fa-brands fa-css3"></i></div>
+          <div class="displace script1"><i class="fa-brands fa-java"></i></div>
+          <div class="displace symbols1"><i class="fa-brands fa-node"></i></div>
+          <div class="displace file1">
+            <i class="fa-solid fa-file-code"></i>
+          </div>
+          <div class="displace link"><i class="fa-solid fa-code-fork"></i></div>
+          <div class="displace nodejs">
+            <i class="fa-brands fa-node-js"></i>
+          </div>
         </div>
       </div>
       <!--PROJECT LAYER-->
-      <div class="project-section">
+      <div class="project-section" id="projects">
         <h1 class="project-h1">PROJECTS</h1>
         <div class="project-container">
           <a
@@ -107,7 +121,7 @@
     </div>
     <!--SKILLS SECTION Also SECTION 3-->
 
-    <div class="section-4">
+    <div class="section-4" id="contact">
       <div class="contact-container">
         <h1 class="contact-h1">Contact Me</h1>
         <form class="form-box" onsubmit="sendMail(); reset(); return false;">
@@ -124,11 +138,23 @@
           <div class="h2"></div>
         </form>
         <div class="links-icon">
-          <a href=""><i class="fa-brands fa-github"></i></a>
-          <a href=""><i class="fa-brands fa-twitter"></i></a>
-          <a href=""><i class="fa-brands fa-instagram"></i></a>
-          <a href=""><i class="fa-brands fa-linkedin"></i></a>
-          <a href=""><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://github.com/Easyblend/" target="blanck"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://twitter.com/easyblend85" target="black"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="https://www.instagram.com/easy_blend93/" target="black"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/emmanuel-kumah-692431224/"
+            target="black"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://mail.google.com/mail/u/1/#inbox" target="black"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
         </div>
       </div>
     </div>
@@ -137,8 +163,52 @@
     <script>
       let menuBtn = document.querySelector(".btn");
       let nav = document.querySelector(".nav-menu");
+      let linkBtn1 = document.querySelector(".linkBtn1");
+      let linkBtn2 = document.querySelector(".linkBtn2");
+      let linkBtn3 = document.querySelector(".linkBtn3");
+      let linkBtn4 = document.querySelector(".linkBtn4");
 
       menuBtn.addEventListener("click", function () {
+        if (nav.classList.contains("navli")) {
+          nav.classList.remove("navli");
+          menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        } else {
+          nav.classList.add("navli");
+          menuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        }
+      });
+
+      linkBtn1.addEventListener("click", function () {
+        if (nav.classList.contains("navli")) {
+          nav.classList.remove("navli");
+          menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        } else {
+          nav.classList.add("navli");
+          menuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        }
+      });
+
+      linkBtn2.addEventListener("click", function () {
+        if (nav.classList.contains("navli")) {
+          nav.classList.remove("navli");
+          menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        } else {
+          nav.classList.add("navli");
+          menuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        }
+      });
+
+      linkBtn3.addEventListener("click", function () {
+        if (nav.classList.contains("navli")) {
+          nav.classList.remove("navli");
+          menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        } else {
+          nav.classList.add("navli");
+          menuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        }
+      });
+
+      linkBtn4.addEventListener("click", function () {
         if (nav.classList.contains("navli")) {
           nav.classList.remove("navli");
           menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
