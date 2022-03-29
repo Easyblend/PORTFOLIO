@@ -443,6 +443,24 @@ button {
     z-index: 999;
   }
 
+  .pro1 {
+    background: url("pro.png");
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .pro2 {
+    background: url("pro2.png");
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .pro3 {
+    background: url("weath.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
+
   .navli {
     animation: navimaton 1s ease;
     font-size: 4rem;
