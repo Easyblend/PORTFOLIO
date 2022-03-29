@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="loader"></div>
     <div class="section-1" id="home">
       <nav class="nav">
         <!--navigation start-->
@@ -45,6 +46,7 @@
       </div>
       <div class="arrow"><i class="fa-solid fa-arrow-down-long"></i></div>
     </div>
+
     <!--SECTION TWO-->
     <div class="section-2" id="about">
       <!--ABOUT SECTION-->
@@ -56,7 +58,7 @@
             career in web-development brought me to Kumasi,Ghana in my teens.
             After working for several large ad agencies in the city, I left the
             rat race to be home with my three spirited (read: loud and
-            strong-willed) sibblings. Being a full-time student at the Kwame
+            strong-willed) siblings. Being a full-time student at the Kwame
             Nkrumash's University of Science and Technology.Being a Student and
             a worker at the same time is also the hardest and not always the
             most fulfilling. Then a magical thing happened: I discovered my love
@@ -167,6 +169,12 @@
       let linkBtn2 = document.querySelector(".linkBtn2");
       let linkBtn3 = document.querySelector(".linkBtn3");
       let linkBtn4 = document.querySelector(".linkBtn4");
+
+      var load = document.getElementById("loader");
+
+      window.addEventListener("load", function () {
+        load.style.display = "none";
+      });
 
       menuBtn.addEventListener("click", function () {
         if (nav.classList.contains("navli")) {
