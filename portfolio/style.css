@@ -6,11 +6,11 @@
 
 #loader {
   position: absolute;
-  background-image: url("https://cdn.dribbble.com/users/2973561/screenshots/5757826/loading__.gif");
+  background-image: url("https://24.media.tumblr.com/f678ce38eb896bc1d4aaa911958af087/tumblr_n2eccv6Dev1rgpzseo1_1280.gif");
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 20%;
   background-position: center center;
-  background-color: rgba(251, 251, 251, 255);
+  background-color: rgb(0, 0, 0);
   width: 100vw;
   height: 100vh;
   z-index: 1028;
