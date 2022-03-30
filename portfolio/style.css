@@ -2,6 +2,7 @@
   margin: 0%;
   padding: 0%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 #loader {
@@ -19,7 +20,6 @@
 .logo img {
   width: 150px;
   margin: 20px 0px;
-  position: fixed;
 }
 
 body {
@@ -32,17 +32,14 @@ body {
   background: rgb(255, 255, 255);
   background-size: cover;
   position: relative;
+  border-bottom: 3px solid rgba(68, 158, 243, 0.397);
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
-  position: fixed;
 }
 
-.nav-menu {
-  margin-left: 1030px;
-}
 .section-1 ul {
   display: flex;
   margin-right: 20px;
@@ -120,6 +117,10 @@ li a {
   color: rgb(230, 23, 23);
 }
 
+#about {
+  display: none;
+}
+
 .about-container {
   padding-right: 5px;
   width: 60%;
@@ -137,7 +138,6 @@ li a {
   background-color: rgb(241, 250, 255);
   padding: 0px 200px;
   display: flex;
-
   flex-direction: column;
 }
 .project-section {
@@ -170,6 +170,8 @@ li a {
   height: 300px;
   border-radius: 10px;
   position: relative;
+  border: 2px solid rgb(141, 0, 0);
+  margin-bottom: 50px;
 }
 .pro1 {
   background: url("pro.png");
@@ -316,13 +318,15 @@ li a {
 }
 
 .section-4 {
-  background: url("https://media.istockphoto.com/photos/sticky-note-message-picture-id536855407?b=1&k=20&m=536855407&s=170667a&w=0&h=lZR59sOrMmkYJMoC8A-6O9d_09-C9n-xWN8B_c7aFco=");
+  background-image: url("https://media.istockphoto.com/photos/sticky-note-message-picture-id536855407?b=1&k=20&m=536855407&s=170667a&w=0&h=lZR59sOrMmkYJMoC8A-6O9d_09-C9n-xWN8B_c7aFco=");
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 50px;
+  border-top: 3px solid rgba(68, 158, 243, 0.397);
 }
+
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -335,6 +339,9 @@ li a {
   box-shadow: 1px 1px 19px 1px rgba(0, 0, 0, 0.226);
 }
 
+#contact {
+  display: none;
+}
 .form-box {
   display: flex;
   flex-direction: column;
@@ -397,7 +404,7 @@ button {
 /********************************MEDIA QUERY FOR 700PX **************************************************/
 @media screen and (max-width: 700px) {
   #loader {
-    background-size: 90%;
+    background-size: 50%;
   }
 
   .logo img {
@@ -425,7 +432,7 @@ button {
 
   .nav-menu {
     display: none;
-    animation: navimaton 1s ease;
+    animation: navimaton 0.3s ease;
     height: 100vh;
     overflow: hidden;
     margin: auto;
@@ -437,14 +444,14 @@ button {
   }
 
   .nav-menu a {
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: bold;
     margin: 0%;
     z-index: 999;
   }
 
   .navli {
-    animation: navimaton 1s ease;
+    animation: navimaton 0.3s ease;
     font-size: 4rem;
     position: fixed;
     display: block;
@@ -456,7 +463,7 @@ button {
 
   .btn {
     display: block;
-    position: fixed;
+    position: absolute;
     right: 10px;
     top: 10px;
     font-size: 1.7rem;
@@ -530,6 +537,10 @@ button {
     margin: 0px;
   }
 
+  .project {
+    margin-bottom: 20px;
+    border: 2px solid rgb(141, 0, 0);
+  }
   .contact-container {
     width: 120%;
   }
