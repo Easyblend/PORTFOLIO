@@ -173,7 +173,7 @@ li a {
 }
 .pro1 {
   background: url("https://www.seekpng.com/png/detail/257-2577617_indian-samosa-png-fast-food-samosa.png");
-  background-position: center center;
+  background-position: center;
   background-size: cover;
 }
 
@@ -394,7 +394,7 @@ button {
 .links-icon {
   font-size: 120%;
 }
-/* MEDIA QUERY FOR 700PX */
+/********************************MEDIA QUERY FOR 700PX **************************************************/
 @media screen and (max-width: 700px) {
   #loader {
     background-size: 90%;
@@ -441,24 +441,6 @@ button {
     font-family: bold;
     margin: 0%;
     z-index: 999;
-  }
-
-  .pro1 {
-    background: url("pro.png");
-    background-position: center center;
-    background-size: cover;
-  }
-
-  .pro2 {
-    background: url("pro2.png");
-    background-position: center center;
-    background-size: cover;
-  }
-
-  .pro3 {
-    background: url("weath.jpg");
-    background-position: center center;
-    background-size: cover;
   }
 
   .navli {
