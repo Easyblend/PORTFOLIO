@@ -61,8 +61,13 @@ li a {
   font-size: 1.3rem;
   color: rgb(231, 41, 27);
   text-align: center;
+  transition: all 0.2s ease;
 }
 
+li a:hover {
+  color: rgb(87, 148, 255);
+  transition: all 0.4s ease;
+}
 .center-text {
   display: flex;
   height: 60%;
@@ -378,7 +383,7 @@ textarea {
   color: rgb(0, 40, 92);
 }
 
-button {
+.submitBtn {
   text-align: center;
   width: 9rem;
   height: 3rem;
@@ -388,8 +393,20 @@ button {
   border: none;
   font-size: 1rem;
   font-weight: bold;
-  background-color: rgba(255, 31, 31, 0.794);
+  background-color: rgba(255, 22, 22, 0.905);
   color: white;
+  transition: all 0.4s ease;
+}
+
+.submitBtn:hover {
+  background-color: #1381ff;
+  transition: all 0.4s ease;
+}
+
+.links-icon a:hover {
+  color: #1381ff;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
 }
 
 .h2 {
@@ -401,6 +418,7 @@ button {
 
 .links-icon {
   font-size: 120%;
+  transition: all 0.4s ease;
 }
 /********************************MEDIA QUERY FOR 700PX **************************************************/
 @media screen and (max-width: 700px) {
