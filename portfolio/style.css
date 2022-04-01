@@ -128,8 +128,9 @@ li a {
 }
 
 .hobby-container {
-  background: url("https://media.istockphoto.com/photos/ghana-accra-kwame-nkrumah-park-picture-id498116341?b=1&k=20&m=498116341&s=170667a&w=0&h=n_E4fSh9YffKJDamDuZc9HuOFuzhGqj1sHzrVmJtKn4=");
+  background: url("https://www.24x7dm.com/img/newimage/avento.gif");
   background-position: center center;
+  background-size: cover;
   width: 40%;
   margin: 40px 0px 40px 50px;
 }
@@ -409,7 +410,6 @@ button {
 
   .logo img {
     width: 120px;
-    margin-top: 10px;
   }
   .section-1 .nav-ul {
     display: flex;
@@ -419,11 +419,11 @@ button {
     margin-top: 50px;
   }
   .center-text {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 
   .center-text p {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
 
   .arrow {
@@ -457,7 +457,7 @@ button {
     display: block;
     width: 100%;
     padding-right: 70px;
-    background-color: #1381ff;
+    background-color: #ffffff;
     z-index: 999;
   }
 
