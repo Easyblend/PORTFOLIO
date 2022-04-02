@@ -4,6 +4,9 @@
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 #loader {
   position: absolute;
@@ -48,7 +51,6 @@ body {
 li {
   margin: 20px 20px;
   list-style: none;
-  color: rgb(231, 41, 27);
   text-align: center;
 }
 
@@ -59,7 +61,7 @@ li {
 li a {
   text-decoration: none;
   font-size: 1.3rem;
-  color: rgb(231, 41, 27);
+  color: rgb(255, 87, 75);
   text-align: center;
   transition: all 0.2s ease;
 }
@@ -78,10 +80,11 @@ li a:hover {
   text-align: center;
   font-size: 1.7rem;
   margin-top: 100px;
+  font-family: "Merriweather", sans-serif;
 }
 
 .center-text p {
-  color: rgba(250, 6, 6, 0.8);
+  color: rgba(255, 51, 51, 0.8);
 }
 
 .btn {
@@ -118,12 +121,23 @@ li a:hover {
 
 .about-container .about {
   font-size: 1.9rem;
-  font-weight: 600;
-  color: rgb(230, 23, 23);
+  color: rgb(255, 62, 62);
+  font-family: "Merriweather", sans-serif;
 }
 
 #about {
   display: none;
+}
+
+.uni {
+  text-decoration: none;
+
+  color: rgb(42, 124, 255);
+}
+
+.prog {
+  color: rgb(255, 83, 83);
+  text-decoration: none;
 }
 
 .about-container {
@@ -136,7 +150,8 @@ li a:hover {
   background: url("https://www.24x7dm.com/img/newimage/avento.gif");
   background-position: center center;
   background-size: cover;
-  width: 40%;
+  width: 50%;
+  height: 250px;
   margin: 40px 0px 40px 50px;
 }
 
@@ -152,8 +167,9 @@ li a:hover {
 
 .project-h1 {
   text-align: center;
-  color: red;
+  color: rgb(255, 48, 48);
   margin-bottom: 50px;
+  font-family: "Merriweather", sans-serif;
 }
 
 .project-h1::after,
@@ -520,24 +536,25 @@ textarea {
   }
 
   .section-2 {
-    padding: 0px 5px;
+    padding: 0px;
   }
 
   .about-section {
     display: grid;
+    place-items: center;
     grid-template-rows: 1fr 1fr;
-    padding: 10px 0px 0px 0px;
+    padding: 40px 40px 0px 40px;
   }
 
   .about-container {
     width: 100%;
-    margin: 0%;
+    margin: 0px 10px;
   }
 
   .hobby-container {
     margin: 0px;
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 0px;
+    padding: 0px 10px;
     width: 100%;
     height: 300px;
   }
@@ -546,7 +563,8 @@ textarea {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 5px;
-    padding: 10px;
+    margin-top: 15px;
+    place-items: center;
   }
   .project-section {
     margin-top: 0px;
@@ -558,6 +576,7 @@ textarea {
   .project {
     margin-bottom: 20px;
     border: 2px solid rgb(141, 0, 0);
+    width: 300px;
   }
   .contact-container {
     width: 120%;
