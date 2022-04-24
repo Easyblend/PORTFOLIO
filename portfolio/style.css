@@ -119,10 +119,8 @@ li a:hover {
   color: white;
   border-radius: 15.5px;
   background-color: #1381ff;
-  position: absolute;
-  top: 880px;
-  right: 50px;
   padding: 3px;
+  margin: auto;
 }
 .on {
   width: 27px;
@@ -500,7 +498,7 @@ textarea {
   .nav-menu {
     display: none;
     animation: navimaton 0.3s ease;
-    height: 50vh;
+    height: 100vh;
     overflow: hidden;
     margin: auto;
     z-index: 999;
@@ -535,6 +533,11 @@ textarea {
     top: 10px;
     font-size: 1.7rem;
     color: rgba(250, 6, 6, 0.8);
+  }
+
+  #switch {
+    top: 25%;
+    right: 13px;
   }
 
   /*ICONS ANIMATIONS*/
@@ -624,9 +627,16 @@ textarea {
   }
 }
 
+@media (max-height: 667px) {
+  #switch {
+    position: absolute;
+    top: 600px;
+  }
+}
+
 @keyframes navimaton {
   0% {
-    transform: translatey(-40px);
+    transform: translatey(-20px);
   }
 
   100% {
