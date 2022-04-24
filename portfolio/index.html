@@ -188,6 +188,7 @@
       let linkBtn2 = document.querySelector(".linkBtn2");
       let linkBtn3 = document.querySelector(".linkBtn3");
       let linkBtn4 = document.querySelector(".linkBtn4");
+      let offbtn = document.querySelector(".off");
 
       menuBtn.addEventListener("click", function () {
         if (nav.classList.contains("navli")) {
@@ -265,6 +266,8 @@
       let matched = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
       function dark() {
+        offbtn.classList.add("off");
+        offbtn.classList.remove("on");
         document.getElementById("home").style.backgroundColor =
           "rgb(0, 10, 15)";
         document.getElementById("home").style.borderBottom =
@@ -282,6 +285,8 @@
       }
 
       function light() {
+        offbtn.classList.remove("off");
+        offbtn.classList.add("on");
         document.getElementById("home").style.backgroundColor =
           "rgb(255, 255, 255)";
         document.getElementById("home").style.borderBottom =
@@ -301,17 +306,15 @@
 
       if (matched) {
         dark();
+      } else {
+        light();
       }
       let switchBtn = document.getElementById("switch");
-      let offbtn = document.querySelector(".off");
 
       switchBtn.addEventListener("click", function () {
         if (offbtn.classList.contains("off")) {
-          offbtn.classList.remove("off");
-          offbtn.classList.add("on");
           light();
         } else {
-          offbtn.classList.add("off");
           dark();
         }
       });
