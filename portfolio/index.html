@@ -99,6 +99,7 @@
           <div class="displace nodejs">
             <i class="fa-brands fa-node-js"></i>
           </div>
+          <div id="switch"><div class="off"></div></div>
         </div>
       </div>
       <!--PROJECT LAYER-->
@@ -174,20 +175,19 @@
 
     <script src=" https://smtpjs.com/v3/smtp.js"></script>
     <script>
-      let menuBtn = document.querySelector(".btn");
-      let nav = document.querySelector(".nav-menu");
-      let linkBtn1 = document.querySelector(".linkBtn1");
-      let linkBtn2 = document.querySelector(".linkBtn2");
-      let linkBtn3 = document.querySelector(".linkBtn3");
-      let linkBtn4 = document.querySelector(".linkBtn4");
-
-      var load = document.getElementById("loader");
+      let load = document.getElementById("loader");
 
       setTimeout(function () {
         load.style.display = "none";
         document.getElementById("about").style.display = "block";
         document.getElementById("contact").style.display = "flex";
       }, 3300);
+      let menuBtn = document.querySelector(".btn");
+      let nav = document.querySelector(".nav-menu");
+      let linkBtn1 = document.querySelector(".linkBtn1");
+      let linkBtn2 = document.querySelector(".linkBtn2");
+      let linkBtn3 = document.querySelector(".linkBtn3");
+      let linkBtn4 = document.querySelector(".linkBtn4");
 
       menuBtn.addEventListener("click", function () {
         if (nav.classList.contains("navli")) {
@@ -264,7 +264,7 @@
 
       let matched = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-      if (matched) {
+      function dark() {
         document.getElementById("home").style.backgroundColor =
           "rgb(0, 10, 15)";
         document.getElementById("home").style.borderBottom =
@@ -280,6 +280,41 @@
           " 5px solid rgb(0, 36, 104)";
         document.getElementById("text").style.color = "white";
       }
+
+      function light() {
+        document.getElementById("home").style.backgroundColor =
+          "rgb(255, 255, 255)";
+        document.getElementById("home").style.borderBottom =
+          "  3px solid rgba(68, 158, 243, 0.397)";
+        document.getElementById("about").style.background =
+          "rgb(241, 250, 255)";
+        document.getElementById("contact").style.backgroundImage =
+          "url(https://media.istockphoto.com/photos/sticky-note-message-picture-id536855407?b=1&k=20&m=536855407&s=170667a&w=0&h=lZR59sOrMmkYJMoC8A-6O9d_09-C9n-xWN8B_c7aFco=)";
+        document.getElementById("contact").style.backgroundRepeat = "";
+        document.getElementById("contact").style.backgroundSize = "";
+        document.getElementById("contact").style.backgroundPosition =
+          "center center";
+        document.getElementById("contact").style.borderTop =
+          " 3px solid rgba(68, 158, 243, 0.397)";
+        document.getElementById("text").style.color = "black";
+      }
+
+      if (matched) {
+        dark();
+      }
+      let switchBtn = document.getElementById("switch");
+      let offbtn = document.querySelector(".off");
+
+      switchBtn.addEventListener("click", function () {
+        if (offbtn.classList.contains("off")) {
+          offbtn.classList.remove("off");
+          offbtn.classList.add("on");
+          light();
+        } else {
+          offbtn.classList.add("off");
+          dark();
+        }
+      });
     </script>
   </body>
 </html>

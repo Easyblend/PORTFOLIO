@@ -92,13 +92,14 @@ li a:hover {
 }
 
 .pic {
-  background-image: url("https://media-exp1.licdn.com/dms/image/C5603AQF-23n4FmayAA/profile-displayphoto-shrink_100_100/0/1641417948376?e=1650499200&v=beta&t=sPqhPnKLa7uIw34-L-Gc6znnIInBSQdkwc2Kjy92xUc");
+  background-image: url("pic.jpg");
   border-radius: 200px;
   background-repeat: no-repeat;
   background-size: cover;
   border: 2px solid rgb(238, 7, 7);
   width: 100px;
   height: 100px;
+  background-position: center center;
 }
 
 .arrow {
@@ -112,6 +113,37 @@ li a:hover {
   animation: navimaton 3s infinite ease;
 }
 
+#switch {
+  width: 51px;
+  height: 31px;
+  color: white;
+  border-radius: 15.5px;
+  background-color: #1381ff;
+  position: absolute;
+  top: 880px;
+  right: 50px;
+  padding: 3px;
+}
+.on {
+  width: 27px;
+  height: 30px;
+  border-radius: 100%;
+  background-image: url("day.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.off {
+  width: 27px;
+  height: 30px;
+  border-radius: 100%;
+  transform: translateX(23px);
+  background-image: url("night.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .about-section {
   padding: 0px 5px;
   display: flex;
@@ -468,7 +500,7 @@ textarea {
   .nav-menu {
     display: none;
     animation: navimaton 0.3s ease;
-    height: 100vh;
+    height: 50vh;
     overflow: hidden;
     margin: auto;
     z-index: 999;
