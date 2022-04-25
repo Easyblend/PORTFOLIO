@@ -23,7 +23,7 @@
   </head>
   <body>
     <div id="loader"></div>
-    <div class="section-1" id="home">
+    <div class="section-1 section-1a" id="home">
       <nav class="nav">
         <!--navigation start-->
         <div class="logo"><img src="LOGO2.png" alt="" /></div>
@@ -270,9 +270,10 @@
         offbtn.classList.remove("on");
         document.getElementById("home").style.backgroundColor =
           "rgb(0, 10, 15)";
+        document.querySelector(".section-1").classList.remove("section-1a");
         document.getElementById("home").style.borderBottom =
           " 5px solid rgb(0, 36, 104)";
-        document.getElementById("about").style.background = "rgb(6, 9, 15)";
+        document.getElementById("about").style.background = "rgb(2, 0, 17)";
         document.getElementById("contact").style.backgroundImage =
           "url(https://sourcingandsupplychain.com/wp-content/uploads/2019/05/cropped-wallpaper-background-hitam-2.jpg)";
         document.getElementById("contact").style.backgroundRepeat = "no-repeat";
@@ -289,6 +290,7 @@
         offbtn.classList.add("on");
         document.getElementById("home").style.backgroundColor =
           "rgb(255, 255, 255)";
+        document.querySelector(".section-1").classList.add("section-1a");
         document.getElementById("home").style.borderBottom =
           "  3px solid rgba(68, 158, 243, 0.397)";
         document.getElementById("about").style.background =
