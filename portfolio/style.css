@@ -10,7 +10,7 @@ html {
 
 #loader {
   position: absolute;
-  background-image: url("https://24.media.tumblr.com/f678ce38eb896bc1d4aaa911958af087/tumblr_n2eccv6Dev1rgpzseo1_1280.gif");
+  background-image: url("load.gif");
   background-repeat: no-repeat;
   background-size: 20%;
   background-position: center center;
@@ -32,7 +32,7 @@ body {
 
 .section-1 {
   height: 100vh;
-  background-image: url("https://wallpaperaccess.com/full/137871.jpg");
+  background-image: url("sky.jpg");
   background-blend-mode: color-dodge;
   background-size: cover;
   background-position: center center;
@@ -46,7 +46,7 @@ body {
       rgba(2, 16, 80, 0),
       rgba(0, 0, 0, 0)
     ),
-    url("https://wallpaperaccess.com/full/448244.jpg");
+    url("skyblue.webp");
   background-blend-mode: normal;
 }
 
@@ -190,7 +190,7 @@ li a:hover {
 }
 
 .hobby-container {
-  background: url("https://www.24x7dm.com/img/newimage/avento.gif");
+  background: url("avento.gif");
   background-position: center center;
   background-size: cover;
   width: 50%;
