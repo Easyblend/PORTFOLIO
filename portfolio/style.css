@@ -10,6 +10,7 @@ html {
 
 #loader {
   position: absolute;
+  display: block;
   background-image: url("load.gif");
   background-repeat: no-repeat;
   background-size: 20%;
