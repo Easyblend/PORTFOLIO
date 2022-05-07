@@ -175,13 +175,6 @@
 
     <script src=" https://smtpjs.com/v3/smtp.js"></script>
     <script>
-      let load = document.getElementById("loader");
-
-      setTimeout(function () {
-        load.style.display = "none";
-        document.getElementById("about").style.display = "block";
-        document.getElementById("contact").style.display = "flex";
-      }, 3300);
       let menuBtn = document.querySelector(".btn");
       let nav = document.querySelector(".nav-menu");
       let linkBtn1 = document.querySelector(".linkBtn1");
@@ -273,7 +266,12 @@
         document.querySelector(".section-1").classList.remove("section-1a");
         document.getElementById("home").style.borderBottom =
           " 5px solid rgb(0, 36, 104)";
-        document.getElementById("about").style.background = "rgb(2, 0, 17)";
+        document.getElementById("about").style.background =
+          "url('https://wallpaper.dog/large/17167921.gif')";
+        document.getElementById("about").style.backgroundRepeat = "no-repeat";
+        document.getElementById("about").style.backgroundSize = "cover";
+        document.getElementById("about").style.backgroundPosition =
+          "center center";
         document.getElementById("contact").style.backgroundImage =
           "url(darkline.jpg)";
         document.getElementById("contact").style.backgroundRepeat = "no-repeat";
@@ -319,6 +317,27 @@
         } else {
           dark();
         }
+      });
+
+      Promise.all(
+        Array.from(document.images).map((img) => {
+          if (img.complete) return Promise.resolve(img.naturalHeight !== 0);
+          return new Promise((resolve) => {
+            img.addEventListener("load", () => resolve(true));
+            img.addEventListener("error", () => resolve(false));
+          });
+        })
+      ).then((results) => {
+        if (results.every((res) => res)) {
+          let load = document.getElementById("loader");
+
+          setTimeout(function () {
+            load.style.display = "none";
+            document.getElementById("about").style.display = "block";
+            document.getElementById("contact").style.display = "flex";
+          }, 3300);
+          console.log("All images loaded Successfully");
+        } else console.log("some images failed to load, all finished loading");
       });
     </script>
   </body>
