@@ -107,7 +107,7 @@
         <h1 class="project-h1">PROJECTS</h1>
         <div class="project-container">
           <a
-            href="https://easyblend.github.io/PROJECTS/Advanced%20Projects/"
+            href="https://easyblend.github.io/project/GRAZZIER%20MOWER/"
             target="_blank"
           >
             <div class="pro2 project">
@@ -115,15 +115,15 @@
             </div>
           </a>
           <a
-            href="https://easyblend.github.io/PROJECTS/Biggies%20Samosa/"
+            href="https://easyblend.github.io/project/CASINO%20CARDER/"
             target="_blank"
           >
             <div class="pro1 project">
-              <span class="effect"><h1>BIGGIES SAMOSA</h1></span>
+              <span class="effect"><h1>RED OR BLACK</h1></span>
             </div>
           </a>
           <a
-            href="https://easyblend.github.io/PROJECTS/weather%20App/"
+            href="https://easyblend.github.io/project/WEATHER%20TODAY/"
             target="_blank"
           >
             <div class="pro3 project">
@@ -242,11 +242,12 @@
 
       function sendMail() {
         Email.send({
-          Host: "smtp.gmail.com",
+          Host: "smtp.elasticemail.com",
           Username: "easyblend85@gmail.com",
-          Password: "slvjnfiejobavamx",
+          Password: "6E2444CF8C7DC10427C8E682D4E7E2397474",
+          port: "2525",
           To: "easyblend85@gmail.com",
-          From: document.getElementById("mail").value,
+          From: "easyblend85@gmail.com",
           Subject: "Sent by:  " + document.getElementById("name").value,
           Body:
             "<br> Email: " +
@@ -257,10 +258,7 @@
             "<br>" +
             " <br> Message: " +
             document.getElementById("textarea").value,
-        }).then(
-          (message) =>
-            (document.querySelector(".h2").innerText = "Message Sent!")
-        );
+        }).then((message) => alert(message));
       }
 
       let matched = window.matchMedia("(prefers-color-scheme: dark)").matches;
